@@ -1,300 +1,481 @@
 ---
 layout: doc
-title: Conflict resolution
+title: Résoudre les conflits
 permalink: /fr/intermediate/conflict-resolution/
 lang: fr
 category: intermediate
+otherguides: "Les autres niveaux"
 ---
 
-# Dealing with Conflicts
 
-## Introduction
 
-Sometimes you are working in JOSM and when you upload all of
-your beautiful edits you get an *evil* message like this:
 
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image05.png)
-
-*This message is telling you that uploading did not work because another
-user has uploaded their edits already. It is telling you that you
-downloaded the area before someone else because you have version 1 and
-the server has the more recent version. More specifically, the node
-with ID:1,921,173,620 is the problem child. This is the object that has
-been edited by someone else.*
-
-This pop-up is a **conflict**, which is essentially a confusion by JOSM as
-to determine which edits to use. Basically, the OSM server has received
-edits that altered the same or similar objects and JOSM does does not
-know which one to use.
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image22.png)
-
-## Conflicts
-
-When you edit in JOSM you are editing a copy, or clone, of the main map.
-JOSM loads OSM objects from the main server and keeps them in memory on
-your computer.  You encounter **conflicts** when you upload altered, added
-or deleted components from your map to the main server that someone else
-has also edited. Since you are working on a local copy of OSM on your
-computer other users can still retrieve, edit and upload the same OSM
-objects. You don’t own the objects that you are currently working on;
-you share them. Therefore, when objects that have both been edited are
-uploaded at similar times, the OSM server gets confused. It does not
-know which upload to be saved and used.  
-
-However, JOSM is able to deduce some conflicts and sometimes you
-will encounter an error, such as this one:
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image23.png)
-
-*This window reveals that JOSM deleted some of your objects that were
-previously deleted.*
-
-This means that JOSM has automatically decided that items in your local
-dataset will not be uploaded to main server because they have already
-been deleted by another user. 
-
-In some conflicts, however, there is no easy action for JOSM to take and
-so it leaves the decision up to the user to determine what the best
-course of action is. Therefore, the conflict needs to be resolved:
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image25.png)
-
-*This tells you to look at all of your conflicts in Layer 1 in the **Dialog
-List** box.*
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image18.png)
-
-*This window provides you with a warning as to whether you are likely to
-experience a conflict with your edits. If you check on the server you
-will be able to fix the editing issues that would arise.*
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image27.png)
-
-*This warning tells you that JOSM failed to delete a node due to it still
-being referenced in a way. In order to remedy this, the user has to go
-back into JOSM and resolve the conflict before uploading the data.*
-
-## Conflict Resolution
-
-Resolving Conflicts are important because none of the edits will save if
-you do not select one version or merge the edits.  Toresolve a
-conflict you must choose the best option for each specific edit.  When
-you are given this Conflict Detected pop-up it is always best to choose
-«Synchronize ---- only». This option saves you time and headache
-because it only looks at the conflict at hand. If you chose to
-«Synchronize entire dataset», then your server must talk with the
-main server about all of the edits and objects. This option is only
-really necessary if you have a mess of conflicts and edits. It is quite
-cumbersome and at times confusing. 
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image11.png)
-
-Next, you will get a pop-up that details your conflict. The error
-message that appears looks complicated, but it is rather simple. You
-will know what type of conflict you have by the symbol
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image08.png)in the top tab. This one refers to the
-properties, such as the location and existence of the object, of the
-object. This is why the coordinates and deleted state are listed. 
-
-Properties: Moved (coordinates) or deleted
-
-Tags: tags do not match
-
-Nodes: there is a differences in the list of nodes in two ways 
-
-Members: there is a difference in the list of members in a relation
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image09.png)
-
-Conflicts only appear with two different edits at a time. If there are
-three or more conflicts, then a chain of conflicts will pop-up.
-Therefore you have to choose or merge with only two conflicts at a
-time. You can choose your version, the other version or, at times,
-merge the two. In this example you do not have the option of merging. 
-Click on the first column, or «My version» if you believe that
-your edits are correct. Click on « Their version» if you think
-that the other edits are better. 
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image06.png)
-
-Once you have selected which version you think is best, then click
-«Apply Resolution». A few more windows will pop up and you will
-be on your way toward being able to upload your edits. 
-
-Do some more editing. Then click ‘Upload’. You will get a pop-up that
-says:
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image28.png)
-
-On your Windows menu you have a Conflict List
-Dialog![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image26.png). This window displays a list of
-conflicts. The total number of unresolved conflicts is shown in the
-header. You can select or resolve a conflict by clicking on it. This is
-useful when you have many conflicts to deal with.
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image14.png)
-
-You cannot upload your changes until this is empty. 
-
-\* SHIFT+ALT+A turns the right Window display on or off during of the
-Authors Dialog
-
-\* SHIFT+ALT+C turns the right Window display on or off during of the
-Conflict Dialog
-
-## Ways to Avoid Conflicts
-
-To minimize the chance and number of conflicts it is useful to upload
-regularly. Conflicts appear more frequently for those who tend to save
-the area they are working on in their local server and wait a while to
-upload it. It is best to download the area you are working on, edit it
-and then immediately upload it. 
-
-Editing in the specific area you have downloaded minimizes conflict
-risk. Make sure you do not edit outside of the area that you have
-downloaded and dividing up the work using the Task Manager. Both of
-these actions avoid multiple users editing in the same area. 
-
-Lastly, because conflict pop-up are so cumbersome, and at times
-annoying, it helps to check if any changes have been made in the area
-you were editing before you upload (via osm.org). 
-
-## Summary
-
-When you edit in JOSM, which downloads copies of the OSM map,
-you run the risk of running into conflicts. Conflicts occur when an
-object has been edited by two people at a similar time. 
-
-## Appendix. More Specific Conflicts
-
-### Tag Conflicts
-
-If the tags of one version of an objects are different from the tags of
-another version, the Conflict dialog shows a ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image08.png)in
-the tab Tags. Click on the tab to display a dialog for resolving tag
-conflicts.
-
-There are three tables displayed in this dialog, from left to right:
-
-1.  My version: shows the tags of the first object version participating
-    in this conflict. These are usually the tags of the object version
-    in your local data set.
-2.  Merged version: shows the merged tags. This table is initially
-    empty. The more tag conflicts you resolve, the more tag values will
-    we be displayed in this table.
-3.  Their version: shows the tags of the second object version
-    participating in this conflict. These are usually the tags of the
-    object version currently stored on the server.
-
-In the example below both versions have a tag "name". The values in the
-two object versions are different, though, and JOSM therefore displays
-the row with a red background. The value of the first version is
-"Secondary School", the opposite version has a value "Elementary
-School". You now have to decide which of these values you want to keep
-and which you want to discard.
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image07.png)
-
-Click on the value you want to keep, in the example for instance on the
-value on the left. If you either double-click on the value or click on
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image21.png), you decide to keep the value and to discard the
-opposite value. The table in the middle now displays the value to keep
-and the background color turns to green.
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image10.png)
-
-When the button Apply Resolutionis enabled you can apply your decision.
-The values you've chosen will be applied and the dialog will be closed.
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image03.png)
-
-## Resolving differences in the node list of two versions of a way
-
-If you see the symbol ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image08.png)in the tab Nodesthen you
-have to resolve differences in the list of
-[nodes](http://josm.openstreetmap.de/wiki/Help/Concepts/Object)of two
-[ways](http://josm.openstreetmap.de/wiki/Help/Concepts/Object). There
-are three columns in the respective panel (see screen shot below):
-
-1.  the leftmost table displays the list of nodes of the the local
-    object version
-2.  the rightmost table displays the list of nodes of the the server
-    object version
-3.  the table in the middle shows the list of nodes of the merged ways
-
-Initially, the middle table is empty. You should now decide which nodes
-to keep from the local dataset (the leftmost table) and which from the
-server dataset (the rightmost table).
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image24.png)
-
-### The standard workflow
-
-The standard workflow to resolve conflicts in the node lists of two
-[object
-versions](http://josm.openstreetmap.de/wiki/Help/Concepts/Object)consists
-of three steps:
-
-1.  Pick nodes from either object version and reorder the resulting node
-    list if necessary
-2.  Freezethe resulting merged node list by clicking on the button
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image16.png). When you freeze the merged node list you
-    tell JOSM that all conflicts in the node list are resolved.
-3.  Apply the resolution
-
-### A simple workflow: Keep the node list from your local object version
-
-The following example shows the workflow when you decide to keep all nodes in the same order from your local object version.
-
--   First, select all elements in the leftmost table (either using the mouse or by 
-    pressing Ctrl-A in the table) (see next screen shot):
-
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image04.png)
-
--   Then, click 
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image19.png)
-    to copy the selected nodes to the middle table with the merged nodes:
-
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image01.png)
-
--   Finally, click
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image16.png)
-    to freeze the resulting merged node list:
-
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image20.png)
-
-    The symbol in the nodes tab now switched to 
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image00.png)
-    and you can apply the merge decisions.
-
-### Support for comparing node lists
-
-It can be difficult to find the differences between the node list of of two object versions, in particular for ways with many nodes.
-
-The Conflict Dialog supports you in finding the differences. It can compare two of the node lists displayed ("my" node list, the merged node list, and "their" node list) and it can render the differences between them with specific background colors.
-
-From the following combo box you can select which pair of node lists to compare:
-
-![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image15.png)
-
-1.  My with Their: compares the leftmost table with the rightmost table
-    in the Conflict Dialog
-2.  My with Merged: compares the leftmost table with the middle table in
-    the Conflict Dialog
-3.  Their with Merge: compares the middle table with the rightmost table
-    in the Conflict Dialog
-
-Depending on the position of a node in the list different background
-colors are used:
-
-1.  The node is in this list only. It isn't present in the opposite list:
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image13.png)
-2.  The node is in both lists, but it is on different positions:
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image02.png)
-3.  White background means that a node is in both lists at the same
-    position.
-
-    ![]({{site.baseurl}}/images/intermediate/en_conflict_resolution_image17.png)
+Résoudre les conflits
+=====================
+
+Introduction
+------------
+
+Parfois lorsque vous travaillez sur JOSM et que vous voulez envoyer sur
+le serveur (upload) les modifications de la base liées à vos éditions,
+vous obtenez ce message inquiétant :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image43.png)
+
+Il vous indique que l'envoi n'a pas fonctionné parce qu'un autre
+utilisateur a envoyé ses éditions qui concernent certains des objets que
+vous avez également édités. Le message précise que vous avez téléchargé
+la zone en premier donc vous possédez la version 1, mais le serveur a
+une version 2 plus récente. Plus spécifiquement, le nœud 2 549 547 834
+est la source du problème. C'est cet objet qui a été modifié par
+quelqu'un d'autre entre le moment où vous l'avez téléchargé et le moment
+où vous avez voulu envoyer vos modifications.
+
+Cette boîte de dialogue est spécifique aux conflits dans JOSM. Dans ce
+logiciel, un conflit correspond à une incapacité du serveur OSM à
+déterminer quelles éditions envoyées doivent être considérées pour
+mettre à jour la base de données. Fondamentalement, le serveur OSM a
+reçu des éditions qui ont modifié des objets identiques ou similaires et
+JOSM ne sait lesquelles doivent être choisies.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image45.png)
+
+Les sujets abordés dans ce chapitre:
+
+1.  Notion de conflits dans OSM
+2.  Résolution des conflits
+3.  Bonnes pratiques pour éviter les conflits
+
+1. Notion de conflits dans OSM
+------------------------------
+
+Lorsque vous éditez dans JOSM, vous êtes en train d'éditer une copie, ou
+un clone, de la carte principale. JOSM charge des objets OSM depuis le
+serveur principal et les garde en mémoire sur votre ordinateur. Vous
+rencontrez des conflits lorsque vous envoyez sur le serveur principal
+des éléments modifiés, ajoutés ou supprimés sur votre carte que
+quelqu'un d'autre a également édités dans l'intervalle entre votre
+téléchargement et l'envoi de vos modifications.
+
+En effet, dans la mesure où vous travaillez sur une copie locale d'OSM
+sur votre ordinateur, d'autres utilisateurs peuvent aussi récupérer,
+éditer et remonter des donnés vers le serveur OSM (upload) concernant
+les mêmes objets OSM que vous. Vous n'avez pas la possession des objets
+sur lesquels vous êtes en train de travailler : vous les partagez.
+Ainsi, lorsque des objets que l'autre utilisateur et vous même avez
+envoyés sur le serveur principal à des moments différents, celui-ci ne
+sait pas quel envoi doit être conservé et utilisé et vous informe donc
+sur ce conflit. JOSM est capable de résoudre seul certains conflits, et
+parfois vous pourrez rencontrer un message d'erreur tel que celui-ci :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image01.png)
+
+Ce message indique que JOSM a supprimé certains des objets de l'extrait
+téléchargé dans JOSM car ils ont depuis été supprimés sur le serveur
+
+Cela signifie que JOSM a décidé automatiquement que des objets de votre
+extrait local de données ne seront pas envoyés sur le serveur principal
+parce qu'ils ont été supprimés par un autre utilisateur.
+
+Cependant, pour certains conflits, il n'y a pas pour JOSM de décision
+simple à prendre et le logiciel laisse alors à l'utilisateur le choix de
+prendre la meilleure décision. Ainsi, le conflit a besoin d'être
+résolu​​​​​ :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image27.png)
+
+Ce message vous informe de la nécessité de regarder les conflits du
+Calque de données dans la boîte de dialogue des Conflits.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image53.png)
+
+Ce message vous fournit un avertissement sur le fait que vous allez
+probablement rencontrer des conflits avec vos éditions. Si vous cliquez
+sur "Vérifier sur le serveur", vous allez être en mesure de corriger les
+erreurs d'édition que le serveur va avoir mis en évidence .
+
+2. Résolution des conflits
+--------------------------
+
+Résoudre les conflits est nécessaire, sinon aucune de vos éditions ne
+pourra être envoyée sur le serveur OSM. Pour résoudre un conflit, vous
+devez choisir la meilleure option pour chaque édition. Lorsque vous êtes
+confronté à cette fenêtre de détection des conflits, il vaut mieux
+toujours choisir le premier bouton à gauche, intitulé "Synchroniser le
+nœud x xxx xxx xxx" ou "Synchroniser seulement les chemins xxx xxx xxx".
+Cette option vous permet de gagner du temps et d'éviter des maux de tête
+dans la mesure où un seul conflit va être considéré à la fois. Si vous
+choisissez "Synchroniser tout le jeu de données", JOSM communiquera avec
+le serveur principal à propos de toutes les éditions et tous les objets.
+Cette option est seulement nécessaire lorsque vous avez un grand nombre
+de conflits et d’éditions et a l’inconvénient d’engendrer parfois de la
+confusion.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image13.png)
+
+Le conflit apparait alors dans la fenêtre latérale "Conflits" à droite
+au sein du panneau des fenêtres latérales. Dans la barre d'outils
+verticale à gauche, l’icône ![image](/images/fr/0300-12-29-conflict-resolution/image09.png) permet
+d’afficher/désafficher cette fenêtre, de même que le raccourci clavier
+SHIFT+ALT+C. Cette fenêtre liste les conflits existants, dont le nombre
+total apparaît en haut dans la zone de titre de la boîte. Vous ne pouvez
+pas envoyer vos modifications avant que cette liste ne soit vide.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image08.png)
+
+Au passage de la souris sur la fenêtre, deux boutons s’affichent :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image41.png)
+
+Avant de commencer à résoudre, il est intéressant de visualiser le nœud
+pour comprendre la raison du conflit. Cliquer d’abord sur le conflit
+puis sur le bouton ![image](/images/fr/0300-12-29-conflict-resolution/image48.png). Faites un clic droit
+sur le conflit à résoudre, et cliquer sur "Zoomer sur conflit".
+
+![image](/images/fr/0300-12-29-conflict-resolution/image20.png)
+
+La carte dans JOSM va être centrée sur le nœud en conflit qui apparaît
+sélectionné en rouge. Vous pouvez ainsi le voir et vous remémorer quand
+vous l’avez créé ou modifié. Cliquez ensuite sur le bouton
+![image](/images/fr/0300-12-29-conflict-resolution/image40.png) qui va ouvrir une fenêtre qui détaille
+votre conflit et permet d’effectuer sa résolution.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image21.png)
+
+Le message d'erreur qui apparaît peut sembler compliqué, mais il est en
+fait assez simple. Vous saurez à quel type de conflit vous êtes
+confronté grâce au symbole![image](/images/fr/0300-12-29-conflict-resolution/image02.png) dans les onglets
+en haut :
+
+-   Propriétés : sur le serveur OSM, le nœud a une nouvelle version de
+    ses coordonnées ou de son état (supprimé/non supprimé).
+-   Attributs : sur le serveur OSM, le nœud a une nouvelle version de
+    ses attributs (ajoutés, modifiés ou supprimés).
+-   Nœuds : sur le serveur OSM, le nœud s’il y a des différences entre
+    les deux listes de nœuds d’un même chemin (way), par exemple une
+    route. Cette possibilité n’existe que pour ce type d’objets et
+    seulement si vous avez préalablement cliqué sur "Synchroniser tout
+    le jeu de données".
+-   Membres : sur le serveur OSM, le nœud s’il y a des différences entre
+    les deux listes de membres d'une relation.
+
+### A. Conflits sur les propriétés
+
+Les propriétés concernent l'emplacement ou l'existence de l'objet. C'est
+pourquoi les coordonnées et l'état (non supprimé ou supprimé) de l’objet
+sont listés.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image26.png)
+
+La fenêtre des conflits présente seulement deux différentes éditions à
+la fois. Votre version, nommée "Ma version", apparaît à gauche. La
+“Version du serveur” apparait à droite. Au centre la "Version fusionnée"
+sera le résultat de la résolution. Lorsque le conflit concerne les
+propriétés, il est important d’avoir regardé auparavant l’objet concerné
+afin de déterminer si ses coordonnées ou son état correspondent à la
+réalité. Si votre version vous semble la meilleure, cliquez sur
+![image](/images/fr/0300-12-29-conflict-resolution/image05.png). Si vous pensez qu’au contraire, c’est
+celle du serveur, cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image17.png). Lorsque vous
+avez cliqué, la version choisie apparait comme la version fusionné et la
+couleur de fond passe du rouge ou vert, de mêtre que devant l’onglet, il
+y a désormais un ![image](/images/fr/0300-12-29-conflict-resolution/image18.png).
+
+![image](/images/fr/0300-12-29-conflict-resolution/image24.png)
+
+Lorsque les conflits sur les propriétés ont tous été résolus, cliquez
+sur le bouton ![image](/images/fr/0300-12-29-conflict-resolution/image12.png)s’il n’est plus grisé. Les
+valeurs que vous avez choisies seront appliquées et la fenêtre se
+fermera. Le conflit est résolu et disparait de la liste des conflits.
+Lorsque la liste est vide, il est possible d’envoyer les modifications
+au serveur OSM. Si un autre onglet est marqué du symbole
+![image](/images/fr/0300-12-29-conflict-resolution/image02.png), il faut d’abord le résoudre.
+
+### B. Conflits sur les attributs
+
+Si les attributs d'une version sont différents des attributs d'une autre
+version, la boite de dialogue pour Résoudre les conflits affiche un
+![image](/images/fr/0300-12-29-conflict-resolution/image02.png) dans l'onglet “Attributs”. Cliquez sur
+l'onglet pour afficher la fenêtre de résolution des conflits spécifiques
+aux attributs. Il y a trois tableaux affichés dans cette fenêtre, de
+gauche à droite :
+
+-   “Ma version” : montre les attributs de la première version
+    participant au conflit de l'objet. Il s'agit habituellement de votre
+    calque de données.
+-   “Version fusionnée” : montre les attributs fusionnés. Ce tableau est
+    vide au départ. Plus vous résolvez des conflits d’attributs, plus
+    des attributs vont apparaître dans ce tableau.
+-   “Version du serveur” : montre les attributs de la deuxième version
+    participant au conflit de l'objet. Ce sont habituellement les
+    attributs de la version de l'objet actuellement enregistrée sur le
+    serveur OSM.
+
+Dans l'exemple ci-dessous, les deux versions ont un tag avec la clé
+"name". Cependant, les valeurs sont différentes pour les deux versions
+de l'objet. La valeur de la première version est "Eglise Ste Thérèse",
+et la version opposée possède la valeur "Eglise Sainte-Thérèse".
+
+![image](/images/fr/0300-12-29-conflict-resolution/image37.png)
+
+Vous devez maintenant décider quelle est la valeur que vous voulez
+conserver et celle que vous allez rejeter. Dans le cas présent, "Eglise
+Sainte-Thérèse" respecte les règles des noms d’objets en cartographie,
+alors que la version abrégée "Eglise Ste Thérèse" est incorrecte. La
+version de droite ("Version du serveur") va ainsi être celle qui va être
+conservée en cliquant sur le bouton ![image](/images/fr/0300-12-29-conflict-resolution/image17.png).
+
+![image](/images/fr/0300-12-29-conflict-resolution/image22.png)
+
+En cas d’erreur, sélectionner l’attribut à annuler dans le tableau
+central "Version fusionnée" et cliquer sur le bouton
+![image](/images/fr/0300-12-29-conflict-resolution/image16.png).
+
+Le deuxième attribut en conflit est d’un type différent : "Ma version"
+ajoute un attribut dont la clé n’existe pas dans la "Version du
+serveur", qui apparait ainsi comme “<non défini\>”. Il s’agit de
+déterminer si cet attribut supplémentaire est pertinent. Si c’est le
+cas, cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image05.png), sinon cliquez sur
+![image](/images/fr/0300-12-29-conflict-resolution/image17.png). Dans l’exemple ci-dessous, "Ma version" a
+été conservée.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image19.png)
+
+Tous les attributs en conflit ont été résolus et la couleur de fond
+devient verte.
+
+Lorsque les conflits sur les attributs ont tous été résolus, cliquez sur
+le bouton ![image](/images/fr/0300-12-29-conflict-resolution/image12.png)s’il n’est plus grisé. Les valeurs
+que vous avez choisies seront appliquées et la fenêtre se fermera. Le
+conflit est résolu et disparait de la liste des conflits. Lorsque la
+liste est vide, il est possible d’envoyer les modifications au serveur
+OSM. Si un autre onglet est marqué du symbole
+![image](/images/fr/0300-12-29-conflict-resolution/image02.png), il faut d’abord le résoudre.
+
+### C. Conflits sur les nœuds
+
+Les conflits sur les
+[nœuds](http://josm.openstreetmap.de/wiki/Help/Concepts/Object) ne
+concernent ni les objets représentés par un point, ni ceux représentés
+par un polygone, mais ceux représntés par un chemin, par exemple une
+route. Le message de détection du conflit va mentionner ceci, comme dans
+l’exemple ci-dessous :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image36.png)
+
+Il s’agit ici de résoudre les différences dans la liste des
+[nœuds](http://josm.openstreetmap.de/wiki/Help/Concepts/Object) de deux
+[chemins](http://josm.openstreetmap.de/wiki/Help/Concepts/Object) : cela
+ne concerne ni les objets représentés par un point, ni ceux représentés
+par un polygone. Cliquez sur "Synchroniser seulement les chemins xxx xxx
+xxx". Dans la fenêtre latérale "Conflits" à droite au sein du panneau
+des fenêtres latérales apparait en conflit à la fois le chemin complet
+et chacun des nœuds en conflit. Dans l’exemple ci-dessous, des conflits
+concernent trois nœuds d’un chemin qui apparait en bas de la liste.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image49.png)
+
+Comme expliqué plus haut, il est conseillé de regarder les nœuds
+affectés en les sélectionnant, puis en faisant un clic droit pour
+pouvoir accéder à ![image](/images/fr/0300-12-29-conflict-resolution/image38.png). Dans notre exemple, le
+conflit concerne une section de route primaire de plusieurs dizaines de
+km de long, ce qui est un cas courant de création de conflits de chemin.
+En effet, compte tenu de la longueur de l’objet, il est tout à fait
+possible qu’un autre utilisateur l’ait édité en dehors de la zone
+téléchargée, comme montré dans l’exemple ci-dessous.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image52.png)
+
+La zone téléchargée fait moins d’un km de large et comprend deux
+sections de routes primaires.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image54.png)
+
+Ces sections de route primaire font en fait plusieurs dizaines de km de
+long.
+
+Réglez d’abord tous les conflits de propriétés des nœuds comme indiqué
+plus haut, puis passez à l’objet chemin, généralement en bas de la
+liste.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image30.png)
+
+Le symbole![image](/images/fr/0300-12-29-conflict-resolution/image02.png) est présent devant l'onglet
+“Nœuds en conflits”. Il y a trois tableaux affichés dans cette fenêtre,
+de gauche à droite :
+
+-   “Ma version” : montre la liste des nœuds de la première version
+    participant au conflit de l'objet. Il s'agit habituellement de votre
+    calque de données.
+-   “Version fusionnée” : montre la liste des nœuds fusionnés. Ce
+    tableau est vide au départ. Plus vous résolvez des conflits de
+    nœuds, plus des nœuds vont apparaître dans ce tableau.
+-   “Version du serveur” : montre la liste des nœuds de la deuxième
+    version participant au conflit de l'objet. Ce sont habituellement
+    les attributs de la version de l'objet actuellement enregistrée sur
+    le serveur OSM.
+
+A la différence de la résolution des conflits de attributs (voir plus
+haut), l’ordre des nœuds dans le tableau de la version fusionnée est
+important, car il conditionne l’ordre dans lequel les nœuds se relient
+les uns aux autres dans l’objet chemin.
+
+Il peut être difficile de voir la différence entre les différentes
+listes de nœuds des trois tableaux, en particulier pour les chemins
+comprenant un grand nombre de nœuds. La fenêtre des conflits permet de
+voir les différences en comparant deux des trois tableaux de nœuds ("Ma
+version", "Version fusionnée", "Version du serveur") et montre les
+différences avec des fonds de couleur différents. Les couleurs ont la
+signification suivante :
+
+-   ![image](/images/fr/0300-12-29-conflict-resolution/image29.png) indique que ce nœud du chemin
+    n’engendre pas de conflit.
+-   ![image](/images/fr/0300-12-29-conflict-resolution/image04.png) indique que ce nœud du chemin existe
+    dans les deux listes, mais à une position différente dans l’ordre
+    des nœuds.
+-   ![image](/images/fr/0300-12-29-conflict-resolution/image03.png) indique que ce nœud du chemin n’existe
+    que dans une seule version.
+
+A partir de la liste déroulante, vous pouvez sélectionner quelles listes
+de nœud vont être comparées :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image14.png)
+
+#### Procédure standard
+
+Pour résoudre les conflits de chemin, la procédure standard comprend
+trois étapes :
+
+-   Choisissez les nœuds à conserver parmi les entre "Ma version" et
+    "Version du serveur" et changez l’ordre des nœuds si nécessaire. Des
+    explications sont fournies plus bas.
+-   Figer la liste fusionnée qui en résulte en cliquant sur le bouton
+    ![image](/images/fr/0300-12-29-conflict-resolution/image10.png). Vous indiquez ainsi à JOSM que la
+    liste des conflits pour cet objet a été résolue.
+-   Appliquer la résolution.
+
+#### Procédure simple : conserver l’intégralité de la liste des nœuds d’une version
+
+La procédure la plus simple est celle où vous décidez de conserver tous
+les nœuds d’une des deux versions, la vôtre ou celle du serveur. Elle a
+l’inconvénient de ne rien conserver des ajouts ou améliorations faites
+dans l’autre version.
+
+Cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image39.png)(ou
+![image](/images/fr/0300-12-29-conflict-resolution/image44.png)si vous avez sélectionné tous les nœuds de
+la version du serveur) ou sélectionnez d’abord tous les nœuds (avec la
+souris ou Ctrl-A) d’une des deux tables, à droite ou à gauche (à gauche
+dans l’exemple).
+
+![image](/images/fr/0300-12-29-conflict-resolution/image06.png)
+
+Cliquez ensuite sur ![image](/images/fr/0300-12-29-conflict-resolution/image28.png)(ou
+![image](/images/fr/0300-12-29-conflict-resolution/image32.png) si vous avez sélectionné tous les nœuds de
+la version du serveur) pour que tous ces nœuds apparaissent dans la
+table de la version fusionnée au centre :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image50.png)
+
+Enfin, cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image10.png) pour figer la version
+fusionnée de la liste de nœuds.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image11.png)
+
+Le symbole devant l’onglet est désormais ![image](/images/fr/0300-12-29-conflict-resolution/image18.png) et
+vous pouvez cliquer sur le bouton ![image](/images/fr/0300-12-29-conflict-resolution/image12.png)s’il n’est
+plus grisé. Les valeurs que vous avez choisies seront appliquées et la
+fenêtre sera fermée. Le conflit est résolu et disparait de la liste des
+conflits. Lorsque la liste est vide, il est possible d’envoyer les
+modifications au serveur OSM.
+
+#### Procédure avancée : sélectionner la meilleure version de chaque nœud
+
+Cette procédure vise à ne pas supprimer l’ensemble des éditions d’une
+des deux versions, mais de conserver le meilleur des deux. Elle
+nécessite de traiter tous les nœuds en faisant attention à leur ordre
+dans la version fusionnée. L’exemple ci-dessous va montrer pas à pas
+comment procéder.
+
+![image](/images/fr/0300-12-29-conflict-resolution/image07.png)
+
+La liste des conflits des nœuds parait complexe mais est en fait
+relativement simple. Tout d’abord, les 8 premiers nœuds, en vert, ne
+pose pas de problème. Le 9ème nœud de "Ma version" est un nouveau nœud
+créé dans la sessions d’édition en cours, comme le montre le fait que ce
+nœud n’a pas encore d'identifiant. Ce nouveau nœud, qui s’insère entre
+les noeuds ![image](/images/fr/0300-12-29-conflict-resolution/image51.png) et ![image](/images/fr/0300-12-29-conflict-resolution/image23.png),
+crée de fait un décalage par rapport à la "Version du serveur" qui ne le
+comprend pas. De fait, l’ordre des nœuds n’est plus le même et tous les
+nœuds qui suivent sont de couleur orange, à l’exception des nouveaux
+nœuds : le nœud de la ligne 15 à gauche et de la ligne 14 à droite. Nous
+allons conserver tous les nœuds communs aux deux versions, ainsi que les
+nouveaux créés dans chacune des deux versions. Nous allons d’abord
+sélectionner les huit premiers nœuds, communs aux deux versions, par
+exemple à gauche, et les placer dans le tableau de la “Version
+fusionnée” en cliquant sur ![image](/images/fr/0300-12-29-conflict-resolution/image28.png).
+
+![image](/images/fr/0300-12-29-conflict-resolution/image15.png)
+
+Puis dans l’exemple, il convient de sélectionner le nouveau nœud de la
+ligne 9 à gauche et cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image35.png)pour le
+placer à la suite des autres dans la "Version fusionnée".
+
+![image](/images/fr/0300-12-29-conflict-resolution/image47.png)
+
+"Il convient ensuite de continuer de la même manière pour les nœuds
+suivants : 9 à 14 à droite, 15 à 22 à gauche, etc. de sorte que tous les
+nœuds soient placés dans la "Version fusionnée" en prenant garde à bien
+respecter leur ordre (par exemple ne pas mettre le nœud 12 avant le nœud
+11 dans l’exemple ci-dessus). En cas d'erreur, il est possible de
+sélectionner un nœud dans la "Version fusionnée" et de le déplacer avec
+![image](/images/fr/0300-12-29-conflict-resolution/image31.png)ou ![image](/images/fr/0300-12-29-conflict-resolution/image34.png), ou bien le
+supprimer de cette liste avec ![image](/images/fr/0300-12-29-conflict-resolution/image25.png).
+
+Une fois cela fait, cliquez sur ![image](/images/fr/0300-12-29-conflict-resolution/image10.png) puis sur
+![image](/images/fr/0300-12-29-conflict-resolution/image12.png). Les valeurs que vous avez choisies seront
+appliquées et la fenêtre sera fermée. Le conflit est résolu et disparait
+de la liste des conflits. Lorsque la liste est vide, il est possible
+d’envoyer les modifications au serveur OSM.
+
+3. Bonnes pratiques pour éviter les conflits
+--------------------------------------------
+
+Les conflits apparaissent plus fréquemment pour ceux qui :
+
+-   ont tendance à sauvegarder leur zone de travail sur leur serveur
+    local et attendent un certain temps avant de l'envoyer sur le
+    serveur principal (upload). Il est préférable de télécharger votre
+    zone de travail, de l'éditer et d'envoyer les modifications
+    immédiatement.
+-   travaillent sur des zones traversées par des objets plus grand que
+    la zone de téléchargement. Les routes sont un cas fréquent.
+
+Pour minimiser les chances de rencontrer des conflits ou en limiter le
+nombre, il est utile :
+
+-   d’éditer uniquement sur la zone que vous avez téléchargée.
+    Assurez-vous de ne jamais éditer en dehors de cette zone de
+    téléchargement.
+-   d'envoyer les modifications régulièrement en cliquant sur
+    ![image](/images/fr/0300-12-29-conflict-resolution/image42.png). Afin d’éviter la multiplication des
+    groupes de modification (changesets), veuillez configurer l’onglet
+    "Groupe de modifications" de la fenêtre d’envoi en décochant "Fermer
+    le groupe après l’envoi". Envoyez les données et au prochain envoi,
+    configurez "Envoyer vers un groupe existant" comme montré ci-dessous
+    :
+
+![image](/images/fr/0300-12-29-conflict-resolution/image46.png)
+
+-   de mettre à jour les données régulièrement en allant dans le menu
+    “Fichier” et cliquer sur ![image](/images/fr/0300-12-29-conflict-resolution/image33.png) .
+
+Résumé
+------
+
+Lorsque vous éditez dans JOSM, qui télécharge des extraits de la carte
+OSM, vous prenez le risque de engendrer des conflits. Les conflits se
+produisent lorsqu'un même objet a été édité par deux personnes à des
+moments proches. Ces conflits doivent être résolus avant de pouvoir
+envoyer les modifications de vos éditions au serveur OSM. Ce chapitre a
+présenté une approche détaillée de la résolution des conflits dans JOSM.
 
 
